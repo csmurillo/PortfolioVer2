@@ -1,13 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
 html,
-body {
+body,#__next {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* overflow: hidden; */
+  /* height:auto; */
+  height:auto;
+  width:100%;
+  /* display:flex; */
+  /* flex-direction: column; */
 }
+@media (min-height: 800px) and ( min-width:1200px) {
+/* @media (min-height: 800px){  */
+  html,
+  body,#__next {
+    height:100%;
+  }
+}
+@media (min-height: 800px) and ( min-width:2000px) {
+  /* @media (min-height: 800px){  */
+    html,
+    body,#__next {
+      height:auto;
+    }
+  }
 
 a {
   color: inherit;
@@ -27,3 +50,42 @@ a {
     background: black;
   }
 }
+
+/* Logo */
+.logoContainer{
+  position:relative;
+}
+.logo{
+  font-size:4rem;
+  /* color:white; */
+  color:rgb(56, 68, 107);
+  position:relative;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+.logoA{
+  color:white;
+  position:absolute;
+  top:0;
+  left:-.2rem;
+}
+@media (min-width: 1024px) {
+  .logo{
+    font-size:6rem;
+  }
+  .logoA{
+    left:-.35rem;
+  }
+}
+.pop{
+  position: relative;
+}
+.view-eye path{
+  stroke:rgb(0, 0, 62);
+  fill:rgb(0, 89, 213);
+}
+
